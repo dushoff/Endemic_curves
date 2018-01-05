@@ -26,3 +26,4 @@ testdir/
 subclone_dir/
 
 *.makestuff
+up.time
