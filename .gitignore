@@ -1,4 +1,5 @@
 commit.time
+target.mk
 .*.sw*
 
 *.pdf
@@ -14,6 +15,7 @@ commit.time
 *.Rlog
 *.r
 .Rhistory
+*.Rout*
 
 *.wrapR.*
 
