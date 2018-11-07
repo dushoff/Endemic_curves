@@ -9,6 +9,8 @@ target: $(target)
 
 Sources = Makefile .ignore README.md sub.mk LICENSE.md
 include sub.mk
+
+Sources += $(ms)
 # include $(ms)/perl.def
 
 ##################################################################
