@@ -1,17 +1,16 @@
-# Endemic_curves
-### Hooks for the editor to set the default target
+## This is Endemic_curves, a screens project directory
+## makestuff/project.Makefile
+
 current: target
-target = Makefile
 -include target.mk
-target: $(target)
 
-##################################################################
+######################################################################
 
-Sources = Makefile .ignore README.md sub.mk LICENSE.md
-include sub.mk
+# Content
 
-Sources += $(ms)
-# include $(ms)/perl.def
+vim_session:
+	bash -cl "vmt"
+
 
 ##################################################################
 
@@ -30,3 +29,20 @@ propCurves.Rout: distFuns.Rout groupFuns.Rout propFuns.Rout propCurves.R
 
 -include $(ms)/wrapR.mk
 # -include $(ms)/oldlatex.mk
+######################################################################
+
+### Makestuff
+
+Sources += Makefile
+
+Ignore += makestuff
+msrepo = https://github.com/dushoff
+Makefile: makestuff/Makefile
+makestuff/Makefile:
+	git clone $(msrepo)/makestuff
+	ls $@
+
+-include makestuff/os.mk
+-include makestuff/git.mk
+-include makestuff/visual.mk
+-include makestuff/projdir.mk
