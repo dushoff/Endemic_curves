@@ -17,6 +17,9 @@ groupTest.Rout simpleGroup.Rout: distFuns.Rout groupFuns.Rout
 
 propCurves.Rout: distFuns.Rout groupFuns.Rout propFuns.Rout propCurves.R
 
+## A version of the first propCurves with a higher hline for talks
+aedes.Rout: distFuns.Rout groupFuns.Rout propFuns.Rout aedes.R
+
 ######################################################################
 
 ### Makestuff
@@ -31,9 +34,6 @@ makestuff/Makefile:
 	ls $@
 
 -include makestuff/os.mk
-
--include makestuff/wrapR.mk
-
 -include makestuff/git.mk
 -include makestuff/visual.mk
 -include makestuff/projdir.mk

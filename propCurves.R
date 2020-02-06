@@ -21,7 +21,6 @@ axis(2, seq(0,1, by = .25), NA)
 axis(2, seq(0,1, by = .5), las = 2)
 abline(h=0.1, lty=2, lwd = lwd)
 legend('topleft', c('homogeneous'), lwd = 2, bty = 'n')
-       
 
 ## real R0 version
 cols <- rainbow(length(clist))
