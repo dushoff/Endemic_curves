@@ -11,6 +11,8 @@ current: target
 vim_session:
 	bash -cl "vmt"
 
+wrap_makeR = defined
+
 Sources += $(wildcard *.R)
 
 groupTest.Rout simpleGroup.Rout: distFuns.Rout groupFuns.Rout
@@ -34,6 +36,10 @@ makestuff/Makefile:
 	ls $@
 
 -include makestuff/os.mk
+
+-include makestuff/makeR.mk
+-include makestuff/pdfpages.mk
+
 -include makestuff/git.mk
 -include makestuff/visual.mk
 -include makestuff/projdir.mk
