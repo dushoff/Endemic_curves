@@ -11,16 +11,16 @@ current: target
 vim_session:
 	bash -cl "vmt"
 
-wrap_makeR = defined
+autowrapR = defined
 
 Sources += $(wildcard *.R)
 
-groupTest.Rout simpleGroup.Rout: distFuns.Rout groupFuns.Rout
+groupTest.Rout simpleGroup.Rout: distFuns.rda groupFuns.rda
 
-propCurves.Rout: distFuns.Rout groupFuns.Rout propFuns.Rout propCurves.R
+propCurves.Rout: distFuns.rda groupFuns.rda propFuns.rda propCurves.R
 
 ## A version of the first propCurves with a higher hline for talks
-aedes.Rout: distFuns.Rout groupFuns.Rout propFuns.Rout aedes.R
+aedes.Rout: distFuns.rda groupFuns.rda propFuns.rda aedes.R
 
 ######################################################################
 
@@ -37,7 +37,7 @@ makestuff/Makefile:
 
 -include makestuff/os.mk
 
--include makestuff/makeR.mk
+-include makestuff/pipeR.mk
 -include makestuff/pdfpages.mk
 
 -include makestuff/git.mk
