@@ -45,7 +45,7 @@ abline(h=0.1, lty=2, lwd = lwd)
 
 # Mixing rate version
 par(mar = c(5, 6, 4, 1.5), cex.lab = cx, cex.axis = cx, cex = cx)
-plot(bet, clist[[1]], type="l", log="x", xlab="mean mixing rate (c)", ylab="Proportion affected",
+plot(bet, clist[[1]], type="l", log="x", xlab="Mean effective mixing (Rnull)", ylab="Proportion affected",
      main = 'endemic equilibrium', 
      	xlim=c(0.1, max(bet)), lwd = lwd, bty='n', ylim = c(0,1.05),
 	yaxt='n')
